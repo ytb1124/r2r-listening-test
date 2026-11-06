@@ -19,4 +19,4 @@ CR3 기반 자극은 BRAS의 조건에 따라 **CC BY-SA 4.0**으로 배포합�
 
 ## 소프트웨어
 webMUSHRA (International Audio Laboratories Erlangen / Fraunhofer IIS) — `LICENSE.txt`, `THIRD-PARTY-NOTICES.txt` 참고.
-바꾼 점: `lib/save_download.js` 추가(결과를 서버 대신 파일로 저장), `index.html`에 그 스크립트와 기본 설정 연결 두 줄 추가.
+바꾼 점: `lib/save_download.js`(결과를 서버 대신 파일로 저장)와 `lib/load_fix.js`(같은 음원은 한 번만, 동시에 6개씩, 실패 시 재시도, 진행 표시) 추가, `index.html`에 두 스크립트와 기본 설정 연결 추가.
