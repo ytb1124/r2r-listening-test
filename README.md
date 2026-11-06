@@ -19,5 +19,5 @@ CR3 기반 자극은 BRAS의 조건에 따라 **CC BY-SA 4.0**으로 배포합�
 
 ## 소프트웨어
 webMUSHRA (International Audio Laboratories Erlangen / Fraunhofer IIS) — `LICENSE.txt`, `THIRD-PARTY-NOTICES.txt` 참고.
-바꾼 점: `lib/save_download.js`(결과를 서버 대신 파일로 저장)와 `lib/load_fix.js`(화면마다 그 화면의 음원만 들어가기 직전에 받고 다음 평가 화면 2개를 미리 받음, 같은 음원은 한 번만, 동시에 6개씩, 실패 시 재시도) 추가, `index.html`에 두 스크립트와 기본 설정 연결 추가.
+바꾼 점: `lib/save_download.js`(결과를 서버 대신 파일로 저장)와 `lib/load_fix.js`(화면마다 그 화면의 음원만 들어가기 직전에 받고 다음 평가 화면 1개만 미리 받음, 같은 음원은 한 번만, 동시에 6개씩, 실패 시 재시도) 추가, `index.html`에 두 스크립트와 기본 설정 연결 추가, 이 평가에 쓰지 않는 three.js(3D 화면용) 제거.
 음원은 로딩 시간을 줄이려고 원본 WAV(24-bit, 48 kHz)를 무손실 FLAC으로 바꿨습니다(269 MB → 49 MB). 85개 모두 원본과 샘플 단위로 같음을 확인했고, `main_v3.yaml`은 확장자만 바뀌었습니다.
