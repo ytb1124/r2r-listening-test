@@ -1,0 +1,269 @@
+testname: "공간 음향 유사도 청취 평가"
+testId: main_v3
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+
+pages:
+  - type: generic
+    id: welcome
+    name: "안내"
+    content: "참여해 주셔서 감사합니다.<br/><br/>이 평가에서는 헤드폰으로 여러 소리를 듣고, 각 소리가 <b>기준음</b>과 얼마나 비슷하게 들리는지 점수를 매깁니다. 정답은 없습니다. 들리는 대로 평가해 주세요.<br/><br/>· 연습 1화면과 본 평가 16화면이 있으며, 전체 시간은 약 30–40분(추정)입니다.<br/>· 화면과 화면 사이에 언제든 쉬어도 됩니다. 8번째 화면 근처에서 한 번 쉬기를 권합니다.<br/>· 불편하거나 피곤하면 언제든 연구자에게 말하고 중단할 수 있습니다.<br/><br/>재생 음량은 연구자가 미리 맞춰 두었습니다. <b>컴퓨터의 음량은 바꾸지 마세요.</b> 소리가 너무 크게 느껴지면 바로 연구자에게 알려 주세요.<br/><br/>준비되면 Next를 누르세요."
+  - type: generic
+    id: train_intro
+    name: "연습 안내"
+    content: "다음 화면은 <b>연습</b>입니다. 결과는 분석에 쓰지 않습니다.<br/><br/>· 맨 왼쪽 <b>Reference</b>가 기준음입니다.<br/>· <b>Cond.</b>로 표시된 5개가 평가할 소리입니다. 순서는 화면마다 섞여 있습니다.<br/>· 소리는 몇 번이든 다시 들을 수 있고, 들으면서 다른 소리로 바꿔 들을 수도 있습니다.<br/>· 소리마다 아래 슬라이더를 움직여 점수를 매깁니다.<br/><br/>평가할 소리 가운데 하나는 기준음과 같은 소리입니다. 기준음과 똑같이 들리면 100점을 주세요."
+  - type: mushra
+    id: train
+    name: "평가"
+    content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+    showWaveform: false
+    enableLooping: true
+    reference: configs/resources/audio/v3/train_CR3_MP5_P05_A.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      B: configs/resources/audio/v3/train_CR3_MP5_P05_B.wav
+      C: configs/resources/audio/v3/train_CR3_MP5_P05_C.wav
+      D: configs/resources/audio/v3/train_CR3_MP5_P05_D.wav
+      LPA: configs/resources/audio/v3/train_CR3_MP5_P05_LPA.wav
+  - type: generic
+    id: main_intro
+    name: "본 평가 안내"
+    content: "연습이 끝났습니다. 이제 본 평가를 시작합니다.<br/><br/>· 화면은 모두 16개입니다. 위쪽 막대에서 진행 정도를 볼 수 있습니다.<br/>· 방법은 연습과 같습니다. 모든 소리를 듣고, 모든 슬라이더를 직접 움직인 뒤 Next를 눌러 주세요.<br/>· 이전 화면으로는 돌아갈 수 없습니다."
+  -
+    - random
+    - type: mushra
+      id: CR3_MP2_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_CR3_MP2_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_CR3_MP2_C_B.wav
+        C: configs/resources/audio/v3/music_CR3_MP2_C_C.wav
+        D: configs/resources/audio/v3/music_CR3_MP2_C_D.wav
+        LPA: configs/resources/audio/v3/music_CR3_MP2_C_LPA.wav
+    - type: mushra
+      id: CR3_MP3_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_CR3_MP3_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_CR3_MP3_C_B.wav
+        C: configs/resources/audio/v3/music_CR3_MP3_C_C.wav
+        D: configs/resources/audio/v3/music_CR3_MP3_C_D.wav
+        LPA: configs/resources/audio/v3/music_CR3_MP3_C_LPA.wav
+    - type: mushra
+      id: CR3_MP5_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_CR3_MP5_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_CR3_MP5_C_B.wav
+        C: configs/resources/audio/v3/music_CR3_MP5_C_C.wav
+        D: configs/resources/audio/v3/music_CR3_MP5_C_D.wav
+        LPA: configs/resources/audio/v3/music_CR3_MP5_C_LPA.wav
+    - type: mushra
+      id: BS_R2_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_BS_R2_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_BS_R2_C_B.wav
+        C: configs/resources/audio/v3/music_BS_R2_C_C.wav
+        D: configs/resources/audio/v3/music_BS_R2_C_D.wav
+        LPA: configs/resources/audio/v3/music_BS_R2_C_LPA.wav
+    - type: mushra
+      id: BS_R5_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_BS_R5_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_BS_R5_C_B.wav
+        C: configs/resources/audio/v3/music_BS_R5_C_C.wav
+        D: configs/resources/audio/v3/music_BS_R5_C_D.wav
+        LPA: configs/resources/audio/v3/music_BS_R5_C_LPA.wav
+    - type: mushra
+      id: DST_R6_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_DST_R6_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_DST_R6_C_B.wav
+        C: configs/resources/audio/v3/music_DST_R6_C_C.wav
+        D: configs/resources/audio/v3/music_DST_R6_C_D.wav
+        LPA: configs/resources/audio/v3/music_DST_R6_C_LPA.wav
+    - type: mushra
+      id: DST_R4_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_DST_R4_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_DST_R4_C_B.wav
+        C: configs/resources/audio/v3/music_DST_R4_C_C.wav
+        D: configs/resources/audio/v3/music_DST_R4_C_D.wav
+        LPA: configs/resources/audio/v3/music_DST_R4_C_LPA.wav
+    - type: mushra
+      id: KH_R2_C
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_KH_R2_C_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_KH_R2_C_B.wav
+        C: configs/resources/audio/v3/music_KH_R2_C_C.wav
+        D: configs/resources/audio/v3/music_KH_R2_C_D.wav
+        LPA: configs/resources/audio/v3/music_KH_R2_C_LPA.wav
+    - type: mushra
+      id: CR3_MP3_P04
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_CR3_MP3_P04_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_CR3_MP3_P04_B.wav
+        C: configs/resources/audio/v3/music_CR3_MP3_P04_C.wav
+        D: configs/resources/audio/v3/music_CR3_MP3_P04_D.wav
+        LPA: configs/resources/audio/v3/music_CR3_MP3_P04_LPA.wav
+    - type: mushra
+      id: CR3_MP3_P08
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_CR3_MP3_P08_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_CR3_MP3_P08_B.wav
+        C: configs/resources/audio/v3/music_CR3_MP3_P08_C.wav
+        D: configs/resources/audio/v3/music_CR3_MP3_P08_D.wav
+        LPA: configs/resources/audio/v3/music_CR3_MP3_P08_LPA.wav
+    - type: mushra
+      id: BS_R2_P04
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_BS_R2_P04_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_BS_R2_P04_B.wav
+        C: configs/resources/audio/v3/music_BS_R2_P04_C.wav
+        D: configs/resources/audio/v3/music_BS_R2_P04_D.wav
+        LPA: configs/resources/audio/v3/music_BS_R2_P04_LPA.wav
+    - type: mushra
+      id: BS_R2_P08
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_BS_R2_P08_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_BS_R2_P08_B.wav
+        C: configs/resources/audio/v3/music_BS_R2_P08_C.wav
+        D: configs/resources/audio/v3/music_BS_R2_P08_D.wav
+        LPA: configs/resources/audio/v3/music_BS_R2_P08_LPA.wav
+    - type: mushra
+      id: DST_R4_P04
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_DST_R4_P04_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_DST_R4_P04_B.wav
+        C: configs/resources/audio/v3/music_DST_R4_P04_C.wav
+        D: configs/resources/audio/v3/music_DST_R4_P04_D.wav
+        LPA: configs/resources/audio/v3/music_DST_R4_P04_LPA.wav
+    - type: mushra
+      id: DST_R4_P08
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_DST_R4_P08_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_DST_R4_P08_B.wav
+        C: configs/resources/audio/v3/music_DST_R4_P08_C.wav
+        D: configs/resources/audio/v3/music_DST_R4_P08_D.wav
+        LPA: configs/resources/audio/v3/music_DST_R4_P08_LPA.wav
+    - type: mushra
+      id: KH_R2_P04
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_KH_R2_P04_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_KH_R2_P04_B.wav
+        C: configs/resources/audio/v3/music_KH_R2_P04_C.wav
+        D: configs/resources/audio/v3/music_KH_R2_P04_D.wav
+        LPA: configs/resources/audio/v3/music_KH_R2_P04_LPA.wav
+    - type: mushra
+      id: KH_R2_P08
+      name: "평가"
+      content: "<b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향), 소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울 만큼 비슷함<br/>슬라이더 옆의 영어 단어는 맨 위(Excellent)가 기준음과 구별하기 어려울 만큼 비슷함, 맨 아래(Bad)가 전혀 비슷하지 않음입니다. <b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>"
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/audio/v3/music_KH_R2_P08_A.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+        B: configs/resources/audio/v3/music_KH_R2_P08_B.wav
+        C: configs/resources/audio/v3/music_KH_R2_P08_C.wav
+        D: configs/resources/audio/v3/music_KH_R2_P08_D.wav
+        LPA: configs/resources/audio/v3/music_KH_R2_P08_LPA.wav
+  - type: finish
+    name: "끝"
+    content: "모든 평가가 끝났습니다. 참여해 주셔서 감사합니다.<br/>연구자가 알려 준 <b>참가자 코드</b>를 입력하고 <b>Send Results</b>를 누른 뒤, 연구자에게 알려 주세요."
+    showResults: false
+    writeResults: true
+    questionnaire:
+      - type: text
+        label: "참가자 코드"
+        name: pid
