@@ -1,0 +1,136 @@
+testname: 청취평가 6화면 청취자
+testId: six_listener
+bufferSize: 8192
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+- type: generic
+  id: welcome
+  name: 안내
+  content: 헤드폰으로 듣고 점수를 매겨 주세요. 총 6화면입니다.
+-
+  - random
+  - type: mushra
+    id: music_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/music_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/music_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/music_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/music_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/music_CR3_MP3_P04_E.flac
+      F: configs/resources/audio/v6/music_CR3_MP3_P04_F.flac
+      G: configs/resources/audio/v6/music_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+  - type: mushra
+    id: music_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/music_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/music_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/music_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/music_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/music_CR3_MP3_P08_E.flac
+      F: configs/resources/audio/v6/music_CR3_MP3_P08_F.flac
+      G: configs/resources/audio/v6/music_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+  - type: mushra
+    id: speech_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/speech_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/speech_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/speech_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/speech_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/speech_CR3_MP3_P04_E.flac
+      F: configs/resources/audio/v6/speech_CR3_MP3_P04_F.flac
+      G: configs/resources/audio/v6/speech_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+  - type: mushra
+    id: speech_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/speech_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/speech_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/speech_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/speech_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/speech_CR3_MP3_P08_E.flac
+      F: configs/resources/audio/v6/speech_CR3_MP3_P08_F.flac
+      G: configs/resources/audio/v6/speech_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+  - type: mushra
+    id: percA_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/percA_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/percA_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/percA_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/percA_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/percA_CR3_MP3_P04_E.flac
+      F: configs/resources/audio/v6/percA_CR3_MP3_P04_F.flac
+      G: configs/resources/audio/v6/percA_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+  - type: mushra
+    id: percA_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/percA_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/percA_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/percA_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/percA_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/percA_CR3_MP3_P08_E.flac
+      F: configs/resources/audio/v6/percA_CR3_MP3_P08_F.flac
+      G: configs/resources/audio/v6/percA_CR3_MP3_ref_G.flac
+    content: <b>기준음(Reference)과 비교했을 때, 각 소리가 전체적으로 얼마나 비슷하게 들립니까?</b><br/>음색, 울림(잔향),
+      소리의 크기 차이를 모두 포함해 전체적인 인상으로 판단해 주세요.<br/>0 = 전혀 비슷하지 않음, 100 = 기준음과 구별하기 어려울
+      만큼 비슷함<br/><b>모든 소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b>
+    randomize: true
+- type: finish
+  name: 끝
+  content: 평가가 끝났습니다.
+  showResults: false
+  writeResults: true
+  questionnaire:
+  - type: text
+    label: 참가자 코드
+    name: code

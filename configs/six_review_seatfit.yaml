@@ -1,0 +1,140 @@
+testname: 청취평가 6화면 연구자 검토 (E/F 자리 맞춤)
+testId: six_review_seatfit
+bufferSize: 8192
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+- type: generic
+  id: welcome
+  name: 안내
+  content: 연구자 검토용 화면입니다. 각 소리의 방법 이름이 표시됩니다.
+- - type: mushra
+    id: music_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/music_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/music_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/music_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/music_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/music_CR3_MP3_P04_Eseat.flac
+      F: configs/resources/audio/v6/music_CR3_MP3_P04_Fseat.flac
+      G: configs/resources/audio/v6/music_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Music: 베토벤 8번</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P04</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: music_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/music_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/music_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/music_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/music_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/music_CR3_MP3_P08_Eseat.flac
+      F: configs/resources/audio/v6/music_CR3_MP3_P08_Fseat.flac
+      G: configs/resources/audio/v6/music_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Music: 베토벤 8번</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P08</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: speech_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/speech_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/speech_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/speech_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/speech_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/speech_CR3_MP3_P04_Eseat.flac
+      F: configs/resources/audio/v6/speech_CR3_MP3_P04_Fseat.flac
+      G: configs/resources/audio/v6/speech_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Speech: ARU ID03</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P04</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: speech_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/speech_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/speech_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/speech_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/speech_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/speech_CR3_MP3_P08_Eseat.flac
+      F: configs/resources/audio/v6/speech_CR3_MP3_P08_Fseat.flac
+      G: configs/resources/audio/v6/speech_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Speech: ARU ID03</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P08</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: percA_P04
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/percA_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/percA_CR3_MP3_P04_B.flac
+      C: configs/resources/audio/v6/percA_CR3_MP3_P04_C.flac
+      D: configs/resources/audio/v6/percA_CR3_MP3_P04_D.flac
+      E: configs/resources/audio/v6/percA_CR3_MP3_P04_Eseat.flac
+      F: configs/resources/audio/v6/percA_CR3_MP3_P04_Fseat.flac
+      G: configs/resources/audio/v6/percA_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Percussive: B&O 봉고</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P04</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: percA_P08
+    name: 평가
+    showWaveform: false
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v6/percA_CR3_MP3_ref_A.flac
+    stimuli:
+      B: configs/resources/audio/v6/percA_CR3_MP3_P08_B.flac
+      C: configs/resources/audio/v6/percA_CR3_MP3_P08_C.flac
+      D: configs/resources/audio/v6/percA_CR3_MP3_P08_D.flac
+      E: configs/resources/audio/v6/percA_CR3_MP3_P08_Eseat.flac
+      F: configs/resources/audio/v6/percA_CR3_MP3_P08_Fseat.flac
+      G: configs/resources/audio/v6/percA_CR3_MP3_ref_G.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Percussive: B&O 봉고</b> · 목표 <b>BRAS CR3 MP3</b>
+      · 재생 위치 <b>P08</b><br/>B=무보정, C=중앙 설계 역필터, D=중앙 설계 Menzies, E=현지 설계 역필터, F=현지
+      설계 Menzies, G=앵커, reference=숨긴 기준음. E/F 음량: 그 자리에서 A에 맞춤'
+    showConditionNames: true
+    randomize: false
+- type: finish
+  name: 끝
+  content: 평가가 끝났습니다.
+  showResults: false
+  writeResults: true
+  questionnaire:
+  - type: text
+    label: 참가자 코드
+    name: code
