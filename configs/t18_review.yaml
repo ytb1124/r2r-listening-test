@@ -1,0 +1,92 @@
+testname: 청취평가 3화면 × 11 연구자 검토 (토론 18)
+testId: t18_review
+bufferSize: 8192
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+- type: generic
+  id: welcome
+  name: 안내
+  content: 연구자 검토용 화면입니다. 조건 이름이 표시됩니다.
+- - type: mushra
+    id: speech
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/speech_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/speech_C_B.flac
+      CTR_C: configs/resources/audio/v18b/speech_C_M.flac
+      P04_B: configs/resources/audio/v18b/speech_P04_B.flac
+      P04_C: configs/resources/audio/v18b/speech_P04_M.flac
+      P08_B: configs/resources/audio/v18b/speech_P08_B.flac
+      P08_C: configs/resources/audio/v18b/speech_P08_M.flac
+      P05_B: configs/resources/audio/v18b/speech_P05_B.flac
+      P05_C: configs/resources/audio/v18b/speech_P05_M.flac
+      anchor35: configs/resources/audio/v18b/speech_A35.flac
+      anchor70: configs/resources/audio/v18b/speech_A70.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Speech: ARU ID03</b> · 목표 BRAS CR3 MP3 · 자리
+      중앙(설계 위치), P04, P08, P05<br/>CTR = 중앙 자리, B = 보정 없음, C = 보정(중앙 설계 초기·후기 에너지
+      매칭), anchor35/anchor70 = 3.5/7 kHz 저역통과 앵커(BS.1534-3), reference = 숨긴 기준음.'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: percA
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/percA_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/percA_C_B.flac
+      CTR_C: configs/resources/audio/v18b/percA_C_M.flac
+      P04_B: configs/resources/audio/v18b/percA_P04_B.flac
+      P04_C: configs/resources/audio/v18b/percA_P04_M.flac
+      P08_B: configs/resources/audio/v18b/percA_P08_B.flac
+      P08_C: configs/resources/audio/v18b/percA_P08_M.flac
+      P05_B: configs/resources/audio/v18b/percA_P05_B.flac
+      P05_C: configs/resources/audio/v18b/percA_P05_M.flac
+      anchor35: configs/resources/audio/v18b/percA_A35.flac
+      anchor70: configs/resources/audio/v18b/percA_A70.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Percussive: B&O 봉고</b> · 목표 BRAS CR3 MP3 ·
+      자리 중앙(설계 위치), P04, P08, P05<br/>CTR = 중앙 자리, B = 보정 없음, C = 보정(중앙 설계 초기·후기 에너지
+      매칭), anchor35/anchor70 = 3.5/7 kHz 저역통과 앵커(BS.1534-3), reference = 숨긴 기준음.'
+    showConditionNames: true
+    randomize: false
+  - type: mushra
+    id: music
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/music_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/music_C_B.flac
+      CTR_C: configs/resources/audio/v18b/music_C_M.flac
+      P04_B: configs/resources/audio/v18b/music_P04_B.flac
+      P04_C: configs/resources/audio/v18b/music_P04_M.flac
+      P08_B: configs/resources/audio/v18b/music_P08_B.flac
+      P08_C: configs/resources/audio/v18b/music_P08_M.flac
+      P05_B: configs/resources/audio/v18b/music_P05_B.flac
+      P05_C: configs/resources/audio/v18b/music_P05_M.flac
+      anchor35: configs/resources/audio/v18b/music_A35.flac
+      anchor70: configs/resources/audio/v18b/music_A70.flac
+    content: '<b>[연구자 검토 모드]</b> 음원 <b>Music: 베토벤 8번</b> · 목표 BRAS CR3 MP3 · 자리 중앙(설계
+      위치), P04, P08, P05<br/>CTR = 중앙 자리, B = 보정 없음, C = 보정(중앙 설계 초기·후기 에너지 매칭), anchor35/anchor70
+      = 3.5/7 kHz 저역통과 앵커(BS.1534-3), reference = 숨긴 기준음.'
+    showConditionNames: true
+    randomize: false
+- type: finish
+  name: 끝
+  content: 평가가 끝났습니다. 감사합니다.
+  showResults: false
+  writeResults: true
+  questionnaire:
+  - type: text
+    label: 1. 참가자 코드<span class="t18hint">연구자가 알려 준 코드</span>
+    name: code

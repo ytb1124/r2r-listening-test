@@ -1,0 +1,223 @@
+testname: 청취평가 3화면 × 11 (토론 18, BS.1534-3 기반)
+testId: t18_listener
+bufferSize: 8192
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+- type: generic
+  id: welcome
+  name: 안내
+  content: <div style="display:inline-block;text-align:left;line-height:1.55"><div
+    style="white-space:nowrap;margin:2px 0"><b>헤드폰으로 듣고, 각 소리가 기준음과 얼마나 비슷한지 점수를 매겨
+    주세요.</b></div><div style="white-space:nowrap;margin:2px 0">연습 1화면과 본 평가 3화면이 있습니다.</div><div
+    style="white-space:nowrap;margin:2px 0">화면마다 평가할 소리는 11개입니다.</div><div style="white-space:nowrap;margin:2px
+    0">그중에는 기준음과 같은 소리, 일부러 소리를 나쁘게 만든 비교용 소리도 들어 있습니다.</div><div style="height:8px"></div><div
+    style="white-space:nowrap;margin:2px 0">재생 음량은 연구자가 맞춰 두었습니다. 컴퓨터 음량은 바꾸지 마세요.</div><div
+    style="white-space:nowrap;margin:2px 0"><b>브라우저 창을 최대화해 주세요.</b></div><div style="white-space:nowrap;margin:2px
+    0">화면마다 Cond. 번호가 붙은 소리가 오른쪽 끝까지 모두 보이는지 확인해 주세요.</div><div style="white-space:nowrap;margin:2px
+    0">보이지 않으면 연구자에게 알려 주세요.</div></div>
+- type: generic
+  id: train_intro
+  name: 연습 안내
+  content: <div style="display:inline-block;text-align:left;line-height:1.55"><div
+    style="white-space:nowrap;margin:2px 0">다음 화면은 <b>연습</b>입니다. 결과는 분석에 쓰지 않습니다.</div><div
+    style="height:8px"></div><div style="white-space:nowrap;margin:2px 0">소리 가운데 하나는
+    기준음과 같은 소리입니다.</div><div style="white-space:nowrap;margin:2px 0">두 개는 고음을 잘라 일부러
+    나쁘게 만든 소리입니다.</div><div style="white-space:nowrap;margin:2px 0">나머지 소리들은 음색이나
+    울림의 양·길이가 기준음과 조금씩 다를 수 있습니다.</div><div style="height:8px"></div><div style="white-space:nowrap;margin:2px
+    0">다음 세 가지를 연습해 보세요.</div><div style="white-space:nowrap;margin:2px 0">① 파형에서
+    2–3초 구간을 지정해 반복 재생하기</div><div style="white-space:nowrap;margin:2px 0">② 가장 비슷한
+    소리와 가장 다른 소리를 먼저 찾고, 나머지를 그 사이에 배치하기</div><div style="white-space:nowrap;margin:2px
+    0">③ 넘어가기 전에 점수 높은 순서대로 들으며 점점 달라지는지 확인하기</div></div>
+- type: mushra
+  id: train
+  name: 평가
+  showWaveform: true
+  enableLooping: true
+  createAnchor35: false
+  createAnchor70: false
+  reference: configs/resources/audio/v18b/train_A.flac
+  stimuli:
+    P07_B: configs/resources/audio/v18b/train_P07_B.flac
+    P07_C: configs/resources/audio/v18b/train_P07_M.flac
+    P10_B: configs/resources/audio/v18b/train_P10_B.flac
+    P10_C: configs/resources/audio/v18b/train_P10_M.flac
+    P02_B: configs/resources/audio/v18b/train_P02_B.flac
+    P02_C: configs/resources/audio/v18b/train_P02_M.flac
+    P06_B: configs/resources/audio/v18b/train_P06_B.flac
+    P06_C: configs/resources/audio/v18b/train_P06_M.flac
+    anchor35: configs/resources/audio/v18b/train_A35.flac
+    anchor70: configs/resources/audio/v18b/train_A70.flac
+  content: '<div style="display:inline-block;text-align:left;line-height:1.55"><div
+    style="white-space:nowrap;margin:2px 0"><b>기준음(Reference)과 비교해, 각 소리가 얼마나 비슷하게
+    들리는지 점수를 주세요.</b></div><div style="white-space:nowrap;margin:2px 0">음색과 울림(잔향)을
+    모두 포함한 전체 인상으로 판단해 주세요.</div><div style="white-space:nowrap;margin:2px 0">100
+    = 기준음과 구별할 수 없음, 0 = 전혀 비슷하지 않음</div><div style="white-space:nowrap;margin:2px
+    0">점수는 상대적으로 주면 됩니다. 소리들 사이의 순서와 간격이 중요합니다.</div><div style="height:8px"></div><div
+    style="white-space:nowrap;margin:2px 0"><b>요령</b></div><div style="white-space:nowrap;margin:2px
+    0">① 모든 소리를 한 번씩 듣고, 기준음과 가장 비슷한 소리와 가장 다른 소리를 먼저 찾으세요.</div><div style="white-space:nowrap;margin:2px
+    0">② 나머지 소리를 그 사이에 배치하세요.</div><div style="white-space:nowrap;margin:2px 0">③
+    차이가 작으면 파형에서 2–3초 구간을 지정해, 기준음과 번갈아 반복해 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+    0">④ 구별되지 않는 소리에는 같은 점수를 줘도 됩니다.</div><div style="white-space:nowrap;margin:2px
+    0">⑤ 다음 화면으로 넘어가기 전에, 점수가 높은 소리부터 낮은 소리까지 차례로 한 번 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+    0">&nbsp;&nbsp;&nbsp;&nbsp;기준음과 점점 더 다르게 들리는지 확인하고, 순서가 맞지 않으면 점수를 고쳐 주세요.</div><div
+    style="height:8px"></div><div style="white-space:nowrap;margin:2px 0"><b>모든 소리를
+    듣고, 모든 슬라이더를 직접 움직여 주세요.</b></div><div style="white-space:nowrap;margin:2px 0">단축키:
+    기준음 <b>₩</b> · 소리 1–9 <b>숫자키</b> · 10번 <b>0</b> · 11번 <b>-</b> · 재생/정지 <b>Space</b>
+    · 정지 <b>Backspace</b></div></div>'
+  randomize: true
+- type: generic
+  id: main_intro
+  name: 본 평가 안내
+  content: <div style="display:inline-block;text-align:left;line-height:1.55"><div
+    style="white-space:nowrap;margin:2px 0">연습이 끝났습니다. 본 평가도 방법은 같습니다.</div><div style="white-space:nowrap;margin:2px
+    0">이전 화면으로는 돌아갈 수 없습니다.</div></div>
+-
+  - random
+  - type: mushra
+    id: speech
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/speech_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/speech_C_B.flac
+      CTR_C: configs/resources/audio/v18b/speech_C_M.flac
+      P04_B: configs/resources/audio/v18b/speech_P04_B.flac
+      P04_C: configs/resources/audio/v18b/speech_P04_M.flac
+      P08_B: configs/resources/audio/v18b/speech_P08_B.flac
+      P08_C: configs/resources/audio/v18b/speech_P08_M.flac
+      P05_B: configs/resources/audio/v18b/speech_P05_B.flac
+      P05_C: configs/resources/audio/v18b/speech_P05_M.flac
+      anchor35: configs/resources/audio/v18b/speech_A35.flac
+      anchor70: configs/resources/audio/v18b/speech_A70.flac
+    content: '<div style="display:inline-block;text-align:left;line-height:1.55"><div
+      style="white-space:nowrap;margin:2px 0"><b>기준음(Reference)과 비교해, 각 소리가 얼마나 비슷하게
+      들리는지 점수를 주세요.</b></div><div style="white-space:nowrap;margin:2px 0">음색과 울림(잔향)을
+      모두 포함한 전체 인상으로 판단해 주세요.</div><div style="white-space:nowrap;margin:2px 0">100
+      = 기준음과 구별할 수 없음, 0 = 전혀 비슷하지 않음</div><div style="white-space:nowrap;margin:2px
+      0">점수는 상대적으로 주면 됩니다. 소리들 사이의 순서와 간격이 중요합니다.</div><div style="height:8px"></div><div
+      style="white-space:nowrap;margin:2px 0"><b>요령</b></div><div style="white-space:nowrap;margin:2px
+      0">① 모든 소리를 한 번씩 듣고, 기준음과 가장 비슷한 소리와 가장 다른 소리를 먼저 찾으세요.</div><div style="white-space:nowrap;margin:2px
+      0">② 나머지 소리를 그 사이에 배치하세요.</div><div style="white-space:nowrap;margin:2px 0">③
+      차이가 작으면 파형에서 2–3초 구간을 지정해, 기준음과 번갈아 반복해 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">④ 구별되지 않는 소리에는 같은 점수를 줘도 됩니다.</div><div style="white-space:nowrap;margin:2px
+      0">⑤ 다음 화면으로 넘어가기 전에, 점수가 높은 소리부터 낮은 소리까지 차례로 한 번 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">&nbsp;&nbsp;&nbsp;&nbsp;기준음과 점점 더 다르게 들리는지 확인하고, 순서가 맞지 않으면 점수를 고쳐 주세요.</div><div
+      style="height:8px"></div><div style="white-space:nowrap;margin:2px 0"><b>모든
+      소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b></div><div style="white-space:nowrap;margin:2px
+      0">단축키: 기준음 <b>₩</b> · 소리 1–9 <b>숫자키</b> · 10번 <b>0</b> · 11번 <b>-</b> · 재생/정지
+      <b>Space</b> · 정지 <b>Backspace</b></div></div>'
+    randomize: true
+  - type: mushra
+    id: percA
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/percA_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/percA_C_B.flac
+      CTR_C: configs/resources/audio/v18b/percA_C_M.flac
+      P04_B: configs/resources/audio/v18b/percA_P04_B.flac
+      P04_C: configs/resources/audio/v18b/percA_P04_M.flac
+      P08_B: configs/resources/audio/v18b/percA_P08_B.flac
+      P08_C: configs/resources/audio/v18b/percA_P08_M.flac
+      P05_B: configs/resources/audio/v18b/percA_P05_B.flac
+      P05_C: configs/resources/audio/v18b/percA_P05_M.flac
+      anchor35: configs/resources/audio/v18b/percA_A35.flac
+      anchor70: configs/resources/audio/v18b/percA_A70.flac
+    content: '<div style="display:inline-block;text-align:left;line-height:1.55"><div
+      style="white-space:nowrap;margin:2px 0"><b>기준음(Reference)과 비교해, 각 소리가 얼마나 비슷하게
+      들리는지 점수를 주세요.</b></div><div style="white-space:nowrap;margin:2px 0">음색과 울림(잔향)을
+      모두 포함한 전체 인상으로 판단해 주세요.</div><div style="white-space:nowrap;margin:2px 0">100
+      = 기준음과 구별할 수 없음, 0 = 전혀 비슷하지 않음</div><div style="white-space:nowrap;margin:2px
+      0">점수는 상대적으로 주면 됩니다. 소리들 사이의 순서와 간격이 중요합니다.</div><div style="height:8px"></div><div
+      style="white-space:nowrap;margin:2px 0"><b>요령</b></div><div style="white-space:nowrap;margin:2px
+      0">① 모든 소리를 한 번씩 듣고, 기준음과 가장 비슷한 소리와 가장 다른 소리를 먼저 찾으세요.</div><div style="white-space:nowrap;margin:2px
+      0">② 나머지 소리를 그 사이에 배치하세요.</div><div style="white-space:nowrap;margin:2px 0">③
+      차이가 작으면 파형에서 2–3초 구간을 지정해, 기준음과 번갈아 반복해 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">④ 구별되지 않는 소리에는 같은 점수를 줘도 됩니다.</div><div style="white-space:nowrap;margin:2px
+      0">⑤ 다음 화면으로 넘어가기 전에, 점수가 높은 소리부터 낮은 소리까지 차례로 한 번 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">&nbsp;&nbsp;&nbsp;&nbsp;기준음과 점점 더 다르게 들리는지 확인하고, 순서가 맞지 않으면 점수를 고쳐 주세요.</div><div
+      style="height:8px"></div><div style="white-space:nowrap;margin:2px 0"><b>모든
+      소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b></div><div style="white-space:nowrap;margin:2px
+      0">단축키: 기준음 <b>₩</b> · 소리 1–9 <b>숫자키</b> · 10번 <b>0</b> · 11번 <b>-</b> · 재생/정지
+      <b>Space</b> · 정지 <b>Backspace</b></div></div>'
+    randomize: true
+  - type: mushra
+    id: music
+    name: 평가
+    showWaveform: true
+    enableLooping: true
+    createAnchor35: false
+    createAnchor70: false
+    reference: configs/resources/audio/v18b/music_A.flac
+    stimuli:
+      CTR_B: configs/resources/audio/v18b/music_C_B.flac
+      CTR_C: configs/resources/audio/v18b/music_C_M.flac
+      P04_B: configs/resources/audio/v18b/music_P04_B.flac
+      P04_C: configs/resources/audio/v18b/music_P04_M.flac
+      P08_B: configs/resources/audio/v18b/music_P08_B.flac
+      P08_C: configs/resources/audio/v18b/music_P08_M.flac
+      P05_B: configs/resources/audio/v18b/music_P05_B.flac
+      P05_C: configs/resources/audio/v18b/music_P05_M.flac
+      anchor35: configs/resources/audio/v18b/music_A35.flac
+      anchor70: configs/resources/audio/v18b/music_A70.flac
+    content: '<div style="display:inline-block;text-align:left;line-height:1.55"><div
+      style="white-space:nowrap;margin:2px 0"><b>기준음(Reference)과 비교해, 각 소리가 얼마나 비슷하게
+      들리는지 점수를 주세요.</b></div><div style="white-space:nowrap;margin:2px 0">음색과 울림(잔향)을
+      모두 포함한 전체 인상으로 판단해 주세요.</div><div style="white-space:nowrap;margin:2px 0">100
+      = 기준음과 구별할 수 없음, 0 = 전혀 비슷하지 않음</div><div style="white-space:nowrap;margin:2px
+      0">점수는 상대적으로 주면 됩니다. 소리들 사이의 순서와 간격이 중요합니다.</div><div style="height:8px"></div><div
+      style="white-space:nowrap;margin:2px 0"><b>요령</b></div><div style="white-space:nowrap;margin:2px
+      0">① 모든 소리를 한 번씩 듣고, 기준음과 가장 비슷한 소리와 가장 다른 소리를 먼저 찾으세요.</div><div style="white-space:nowrap;margin:2px
+      0">② 나머지 소리를 그 사이에 배치하세요.</div><div style="white-space:nowrap;margin:2px 0">③
+      차이가 작으면 파형에서 2–3초 구간을 지정해, 기준음과 번갈아 반복해 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">④ 구별되지 않는 소리에는 같은 점수를 줘도 됩니다.</div><div style="white-space:nowrap;margin:2px
+      0">⑤ 다음 화면으로 넘어가기 전에, 점수가 높은 소리부터 낮은 소리까지 차례로 한 번 들어 보세요.</div><div style="white-space:nowrap;margin:2px
+      0">&nbsp;&nbsp;&nbsp;&nbsp;기준음과 점점 더 다르게 들리는지 확인하고, 순서가 맞지 않으면 점수를 고쳐 주세요.</div><div
+      style="height:8px"></div><div style="white-space:nowrap;margin:2px 0"><b>모든
+      소리를 듣고, 모든 슬라이더를 직접 움직여 주세요.</b></div><div style="white-space:nowrap;margin:2px
+      0">단축키: 기준음 <b>₩</b> · 소리 1–9 <b>숫자키</b> · 10번 <b>0</b> · 11번 <b>-</b> · 재생/정지
+      <b>Space</b> · 정지 <b>Backspace</b></div></div>'
+    randomize: true
+- type: finish
+  name: 끝
+  content: 평가가 끝났습니다. 감사합니다.
+  showResults: false
+  writeResults: true
+  questionnaire:
+  - type: text
+    label: 1. 참가자 코드<span class="t18hint">연구자가 알려 준 코드</span>
+    name: code
+  - type: text
+    label: 2. 평가가 얼마나 어려웠나요?<span class="t18hint">1 쉬움 · 2 · 3 보통 · 4 · 5 매우 어려움 중
+      숫자 하나</span>
+    name: difficulty
+  - type: text
+    label: 3. 소리 사이의 작은 차이를 점수로 옮길 수 있었나요?<span class="t18hint">예 / 어느 정도 / 아니오, 그리고
+      이유</span>
+    name: mapping
+  - type: text
+    label: 4. 화면마다 11개 소리가 모두 보였나요?<span class="t18hint">예 / 아니오</span>
+    name: ui_visible
+  - type: text
+    label: 5. 구간 반복 기능을 썼나요?<span class="t18hint">예 / 아니오</span>
+    name: ui_loop
+  - type: text
+    label: 6. 중간에 집중이 떨어졌나요?<span class="t18hint">아니오, 또는 몇 번째 화면부터</span>
+    name: fatigue
+  - type: text
+    label: 7. 지직거림이나 끊김이 들렸나요?<span class="t18hint">아니오, 또는 어느 화면의 어떤 소리</span>
+    name: crackle
+  - type: text
+    label: 8. 타악(봉고) 화면에서 소리 크기가 서로 다르게 느껴졌나요?<span class="t18hint">예 / 아니오</span>
+    name: perc_loudness
+  - type: long_text
+    label: 9. 그 밖의 의견<span class="t18hint">자유롭게</span>
+    name: comment
