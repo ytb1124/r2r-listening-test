@@ -1,4 +1,4 @@
-testname: 공연장 울림 유사도 청취평가 (연구자 검토용)
+testname: 공간 음향 재현 청취평가 (연구자 검토용)
 testId: t18_review
 bufferSize: 8192
 stopOnErrors: true
