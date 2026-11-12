@@ -1,4 +1,4 @@
-testname: 청취평가 3화면 × 11 (토론 18, BS.1534-3 기반)
+testname: 공연장 울림 유사도 청취평가
 testId: t18_listener
 bufferSize: 8192
 stopOnErrors: true
