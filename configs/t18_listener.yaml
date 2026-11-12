@@ -193,31 +193,61 @@ pages:
   writeResults: true
   questionnaire:
   - type: text
-    label: 1. 참가자 코드<span class="t18hint">연구자가 알려 준 코드</span>
+    label: '1. 참가자 코드<span class="t18hint">연구자가 알려 준 코드(예: L01)</span>'
     name: code
-  - type: text
-    label: 2. 평가가 얼마나 어려웠나요?<span class="t18hint">1 쉬움 · 2 · 3 보통 · 4 · 5 매우 어려움 중
-      숫자 하나</span>
+  - type: likert
+    label: 2. 평가가 얼마나 어려웠나요?
     name: difficulty
-  - type: text
-    label: 3. 소리 사이의 작은 차이를 점수로 옮길 수 있었나요?<span class="t18hint">예 / 어느 정도 / 아니오, 그리고
-      이유</span>
+    response:
+    - value: '1'
+      label: 1 쉬움
+    - value: '2'
+      label: '2'
+    - value: '3'
+      label: 3 보통
+    - value: '4'
+      label: '4'
+    - value: '5'
+      label: 5 매우 어려움
+  - type: likert
+    label: 3. 소리 사이의 작은 차이를 점수로 옮길 수 있었나요?
     name: mapping
-  - type: text
-    label: 4. 화면마다 11개 소리가 모두 보였나요?<span class="t18hint">예 / 아니오</span>
+    response:
+    - value: 'yes'
+      label: 예
+    - value: partly
+      label: 어느 정도
+    - value: 'no'
+      label: 아니오
+  - type: likert
+    label: 4. 화면마다 11개 소리가 모두 보였나요?
     name: ui_visible
-  - type: text
-    label: 5. 구간 반복 기능을 썼나요?<span class="t18hint">예 / 아니오</span>
-    name: ui_loop
-  - type: text
-    label: 6. 중간에 집중이 떨어졌나요?<span class="t18hint">아니오, 또는 몇 번째 화면부터</span>
+    response:
+    - value: 'yes'
+      label: 예
+    - value: 'no'
+      label: 아니오
+  - type: likert
+    label: 5. 중간에 집중이 떨어졌나요?<span class="t18hint">연습 화면은 세지 않습니다</span>
     name: fatigue
-  - type: text
-    label: 7. 지직거림이나 끊김이 들렸나요?<span class="t18hint">아니오, 또는 어느 화면의 어떤 소리</span>
+    response:
+    - value: 'no'
+      label: 아니오
+    - value: screen1
+      label: 1번째 화면부터
+    - value: screen2
+      label: 2번째 화면부터
+    - value: screen3
+      label: 3번째 화면부터
+  - type: likert
+    label: 6. 지직거림이나 끊김이 들렸나요?<span class="t18hint">예라면 어느 화면의 어떤 소리였는지 7번에 적어 주세요</span>
     name: crackle
-  - type: text
-    label: 8. 타악(봉고) 화면에서 소리 크기가 서로 다르게 느껴졌나요?<span class="t18hint">예 / 아니오</span>
-    name: perc_loudness
+    response:
+    - value: 'yes'
+      label: 예
+    - value: 'no'
+      label: 아니오
   - type: long_text
-    label: 9. 그 밖의 의견<span class="t18hint">자유롭게</span>
+    label: 7. 그 밖의 의견<span class="t18hint">선택 사항. 3번에서 어려웠던 이유 등</span>
     name: comment
+    optional: true
