@@ -6,6 +6,26 @@ showButtonPreviousPage: false
 remoteService: service/write.php
 pages:
 - type: generic
+  id: consent
+  name: 연구 참여 동의
+  content: <div style="display:inline-block;text-align:left;line-height:1.55"><div
+    style="white-space:nowrap;margin:2px 0"><b>연구 참여 안내</b></div><div style="height:8px"></div><div
+    style="white-space:nowrap;margin:2px 0"><b>목적</b>  어떤 공간의 울림을 다른 공간에서 재생할 때, 소리가
+    원래 공간과 얼마나 비슷하게 들리는지 확인합니다.</div><div style="white-space:nowrap;margin:2px 0"><b>할
+    일</b>  헤드폰으로 기준음과 여러 소리를 듣고, 기준음과 얼마나 비슷한지 0–100점으로 매긴 뒤 짧은 설문에 답합니다.</div><div
+    style="white-space:nowrap;margin:2px 0"><b>시간</b>  연습 1화면과 본 평가 3화면입니다. 예상 시간은
+    연구자가 안내합니다.</div><div style="white-space:nowrap;margin:2px 0"><b>위험</b>  재생 음량은
+    연구자가 일상 수준으로 정해 두었습니다. 불편하면 언제든 멈출 수 있습니다.</div><div style="white-space:nowrap;margin:2px
+    0"><b>자발성</b>  참여는 자유이며, 중간에 그만두어도 불이익이 없습니다.</div><div style="white-space:nowrap;margin:2px
+    0"><b>수집 정보</b>  점수, 화면별 재생·조작 기록, 설문 답, 참가자 코드. 이름과 연락처는 결과에 저장하지 않습니다.</div><div
+    style="white-space:nowrap;margin:2px 0"><b>이용</b>  학위·학회 논문과 발표에 쓰며, 개인을 알아볼 수
+    없는 형태로만 공개합니다.</div><div style="white-space:nowrap;margin:2px 0">&nbsp;&nbsp;&nbsp;&nbsp;익명
+    결과는 연구 재현을 위해 공개될 수 있습니다.</div><div style="white-space:nowrap;margin:2px 0"><b>문의</b>  궁금한
+    점은 평가 전후에 연구자에게 물어보세요.</div><div style="height:8px"></div><div style="white-space:nowrap;margin:2px
+    0"><label style="font-weight:600;cursor:pointer"><input type="checkbox" id="t18consent"
+    data-role="none" style="width:18px;height:18px;vertical-align:middle;margin-right:8px">위
+    내용을 읽었고, 연구 참여에 동의합니다.</label></div></div>
+- type: generic
   id: welcome
   name: 안내
   content: 연구자 검토용 화면입니다. 조건 이름이 표시됩니다.
